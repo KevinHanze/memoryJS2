@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fd28624-43d4-4855-97ce-3d1f77dd4e24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Memory_stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/Memory_stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memory.html" beforeDir="false" afterPath="$PROJECT_DIR$/memory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/memory.js" afterDir="false" />
+    <list default="true" id="9fd28624-43d4-4855-97ce-3d1f77dd4e24" name="Default Changelist" comment="Kleur veranderen">
+      <change afterPath="$PROJECT_DIR$/leesopdrachten.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +22,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -36,11 +36,41 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654251625045</updated>
-      <workItem from="1654251626296" duration="6478000" />
+      <workItem from="1654251626296" duration="7794000" />
     </task>
+    <task id="LOCAL-00001" summary="Kleur veranderen">
+      <created>1654258328738</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654258328738</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Kleur veranderen">
+      <created>1654258343209</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654258343209</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Kleur veranderen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kleur veranderen" />
   </component>
 </project>

@@ -1,0 +1,9 @@
+1. De methode die wordt beschreven om een goed beeld te geven hoe veel javascript wordt gebruikt is door het uit te zetten in je browser.
+We zijn naar 4 websites gegaan: Youtube, dumpert, apple.com en nu.nl. Wat voornamelijk niet meer werkt is de interactieve bewegende content zoals videos, video previews,
+bewegende beelden. Dit werkt allemaal niet zonder javascript.
+
+2. Een van de redenen die beschreven wordt om javascript te vervangen is omdat het makkelijker is om een nieuwe taal te gebruiken dan een oude taal te fixen. Doordat
+Javascript zo snel wordt ontwikkeld en er zoveel libraries worden gemaakt, is het makkelijk om de veiligheid uit het oog te verliezen. Als we kijken naar de mogelijke
+gevaren is het wel belangrijk om te kijken of de handigheid en functionaliteiten van javascript het waard zijn. Stel dat hackers in de toekomst zonder probleem bij
+servers naar binnen komen door javascript, dan lijkt mij het heel belangrijk een alternatief te vinden. En aangezien javascript bijna op elke webserver wordt gebruikt,
+zou dit een heel groot probleem kunnen zijn.
