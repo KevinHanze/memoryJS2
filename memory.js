@@ -1,6 +1,12 @@
 const cards = document.querySelectorAll('.cell')
 const victoryImg = document.getElementById("victory-img")
 const newGameButton = document.getElementById("new-game-button")
+const loadedImages = [];
+const imagesUrl = "https://dog.ceo/api/breeds/image/random";
+
+const options = {
+    method: "GET"
+}
 
 let cardFlipped = false;
 let firstCard, secondCard
@@ -9,7 +15,7 @@ let cardsFlipped = 0;
 
 cards.forEach(card => card.addEventListener("click", flipCard))
 victoryImg.addEventListener("click", resetBoard)
-newGameButton.addEventListener("click", resetBoard)
+newGameButton.addEventListener("click", loadImages)
 
 function flipCard(event) {
     if (boardLocked) {return;}
@@ -77,8 +83,9 @@ function asignLetters() {
         card.style.order = Math.floor(Math.random() * 36);
      })
 }
+
 function fetchImage() {
-    const imgUrl = "https://picsum.photos/200";
+    const imgUrl = "https://picsum.photos/300";
     (async () => {
         const response = await fetch(imgUrl);
         const imageBlob = await response.blob();
@@ -86,12 +93,47 @@ function fetchImage() {
         reader.readAsDataURL(imageBlob);
         reader.onloadend = () => {
             const base64data = reader.result;
-            console.log(base64data);
         }
     })()
 }
 
-function changeColor() {
-    var defaultColor = document.getElementById("card-color").value;
-    document.documentElement.style.setProperty('--colorclosed', defaultColor)
+async function loadImages() {
+
+    for (let i = 0; i < 18; i++) {
+    let response = await fetch(imagesUrl, options)
+
+    if (response.status === 200) {
+        const imgBlob = await response.blob()
+        const imageObjectURL = URL.createObjectURL(imgBlob)
+
+        const image = document.createElement("img")
+        image.src = imageObjectURL;
+
+        loadedImages.push(imageObjectURL)
+
+    }
+    else {
+        console.log("HTTP-Error" + response.status)
+        }
+    }
+
+    console.log(loadedImages)
+    asignImage();
 }
+
+function asignImage() {
+    for (let i =0; i < 18; i++) {
+        var card = document.getElementsByClassName('cell')[i];
+        var card2 = document.getElementsByClassName('cell')[i+18];
+        var img = document.createElement("img");
+        img.src = loadedImages[i];
+        card2.appendChild(img)
+        card.appendChild(img)
+    }
+}
+
+
+
+
+
+

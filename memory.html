@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="Memory_stylesheet.css">
     <title>Javascript memory</title>
 </head>
-<body onload="asignLetters()">
-    <div onclick="changeColor()" class="main-div">
+<body onload="loadImages()">
+    <div class="main-div">
         <div id="top-text">
         <h1>Javascript memory</h1>
         <p>Verlopen tijd: 64 seconden<br>
@@ -17,9 +17,9 @@
             <div id="bar"></div>
         </div>
 
-        <div  class="grid-container">
+        <div class="grid-container">
             <div class="card-grid">
-                <div class="cell" id="card1"><img src="https://picsum.photos/200" class="card-img"></div>
+                <div class="cell" id="card1"></div>
                 <div class="cell" id="card2">A</div>
                 <div class="cell" id="card3">B</div>
                 <div class="cell" id="card4">B</div>
@@ -99,7 +99,7 @@
             </div>
             <div id="card-colours">
                 <button class="button">kaartkleur</button>
-                <input type="color" id="card-color" value="#00a8ff"><br>
+                <input type="color" id="card-color" value="#93FF33"><br>
                 <button class="button">Open</button>
                 <input type="color" id="card-open" value="#1C8A16"><br>
                 <button class="button">Gevonden</button>
@@ -112,6 +112,7 @@
                 <img src="../images/Victory_screen.png" id="victory-img">
             </div>
         </div>
+        <div id="test"></div>
     </div>
 </body>
 <script src="memory.js"></script>
