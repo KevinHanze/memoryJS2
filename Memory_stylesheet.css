@@ -1,0 +1,113 @@
+.main-div {
+    border: 2px solid black;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 90px);
+    grid-template-rows: repeat(6, 90px);
+}
+
+.grid-container {
+    display: inline-block;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
+
+.cell {
+    border: 2px solid white;
+    background-color: greenyellow;
+    text-align: center;
+    vertical-align: middle;
+    padding: 16px;
+    color: transparent;
+    justify-content: center;
+
+}
+
+.cell.flip {
+    background-color: darkgreen;
+    border: 2px solid white;
+    text-align: center;
+    vertical-align: middle;
+    padding: 18px;
+    color: black;
+}
+
+.cell.found {
+    background-color: purple;
+    border: 2px solid white;
+    text-align: center;
+    vertical-align: middle;
+    padding: 18px;
+    color: black;
+}
+
+.sidebar {
+    float: right;
+    margin-right: 60px;
+
+}
+
+.button {
+    margin-bottom: 2px;
+    width: 45%;
+}
+
+.victory-screen {
+    background-image: url("../images/Victory_screen.png");
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+#top-text {
+    position: relative;
+    left: -5%;
+}
+
+#victory-img {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#time-bar {
+    position: relative;
+    width: 10%;
+    height: 20px;
+    background-color: grey;
+    left: 40%;
+}
+
+#bar {
+    width: 70%;
+    height: 20px;
+    background-color: green;
+}
+
+#card-colours {
+    padding-top: 60px;
+}
+
+#new-game {
+    padding-top: 40px;
+}
+
+
+
+
+
+
+
+

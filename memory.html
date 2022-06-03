@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Memory_stylesheet.css">
+    <title>Javascript memory</title>
+</head>
+<body onload="asignLetters()">
+    <div class="main-div">
+        <div id="top-text">
+        <h1>Javascript memory</h1>
+        <p>Verlopen tijd: 64 seconden<br>
+        Gevonden kaart-paren: 1<br>
+        resterende speeltijd:<br></p>
+        </div>
+        <div id="time-bar">
+            <div id="bar"></div>
+        </div>
+
+        <div class="grid-container">
+            <div class="card-grid">
+                <div class="cell" id="card1"><img src="https://picsum.photos/200" class="card-img"></div>
+                <div class="cell" id="card2">A</div>
+                <div class="cell" id="card3">B</div>
+                <div class="cell" id="card4">B</div>
+                <div class="cell" id="card5">C</div>
+                <div class="cell" id="card6">C</div>
+
+
+                <div class="cell" id="card7">D</div>
+                <div class="cell" id="card8">D</div>
+                <div class="cell" id="card9">E</div>
+                <div class="cell" id="card10">E</div>
+                <div class="cell" id="card11">F</div>
+                <div class="cell" id="card12">F</div>
+
+
+                <div class="cell" id="card13">G</div>
+                <div class="cell" id="card14">G</div>
+                <div class="cell" id="card15">H</div>
+                <div class="cell" id="card16">H</div>
+                <div class="cell" id="card17">I</div>
+                <div class="cell" id="card18">I</div>
+
+
+                <div class="cell" id="card19">J</div>
+                <div class="cell" id="card20">J</div>
+                <div class="cell" id="card21">K</div>
+                <div class="cell" id="card22">K</div>
+                <div class="cell" id="card23">L</div>
+                <div class="cell" id="card24">L</div>
+
+
+                <div class="cell" id="card25">M</div>
+                <div class="cell" id="card26">M</div>
+                <div class="cell" id="card27">N</div>
+                <div class="cell" id="card28">N</div>
+                <div class="cell" id="card29">P</div>
+                <div class="cell" id="card30">P</div>
+
+
+                <div class="cell" id="card31">Q</div>
+                <div class="cell" id="card32">Q</div>
+                <div class="cell" id="card33">R</div>
+                <div class="cell" id="card34">R</div>
+                <div class="cell" id="card35">S</div>
+                <div class="cell" id="card36">S</div>
+
+            </div>
+        </div>
+        <div class="sidebar">
+        <div id="scoreboard">
+            <h4>top vijf</h4>
+            <ol>
+                <li>  Barrack Obama : 200 </li>
+                <li>  Bernie Sanders : 300 </li>
+                <li>  Hillary Clinton : 400 </li>
+                <li>  Donald Trump : 500 </li>
+                <li>  Jeb Bush : 600 </li>
+            </ol>
+        </div>
+            <div id="avg-time">
+                <p><b>Gemiddelde speeltijd : </b>0s (64s)</p>
+            </div>
+            <div id="card-board-customizer">
+                <label for="card-dropdown"><b>Karakter op kaarten</b></label>
+                <select name="card-character" id="card-dropdown">
+                    <option value="*">*</option>
+                    <option value="X">X</option>
+                    <option value="#">#</option>
+                </select>
+                <br>
+                <label for="boardsize-dropdown"><b>Afmeting bord</b></label>
+                <select name="boardsize-dropdown" id="boardsize-dropdown">
+                    <option value="10">10</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+            <div id="card-colours">
+                <button class="button">kaartkleur</button>
+                <input type="color" id="card-color" value="#93FF33"><br>
+                <button class="button">Open</button>
+                <input type="color" id="card-open" value="#1C8A16"><br>
+                <button class="button">Gevonden</button>
+                <input type="color" id="card-found" value="#90088C"><br>
+            </div>
+            <div id="new-game">
+            <button class="button" id="new-game-button">Nieuw spel</button>
+            </div>
+            <div class="victory-screen">
+                <img src="../images/Victory_screen.png" id="victory-img">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="memory.js"></script>
+</html>
