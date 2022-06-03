@@ -77,7 +77,6 @@ function asignLetters() {
         card.style.order = Math.floor(Math.random() * 36);
      })
 }
-
 function fetchImage() {
     const imgUrl = "https://picsum.photos/200";
     (async () => {
@@ -92,5 +91,7 @@ function fetchImage() {
     })()
 }
 
-
-
+function changeColor() {
+    var defaultColor = document.getElementById("card-color").value;
+    document.documentElement.style.setProperty('--colorclosed', defaultColor)
+}

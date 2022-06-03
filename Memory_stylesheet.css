@@ -17,16 +17,17 @@
     padding-top: 20px;
 
 }
-
+:root{
+    --colorclosed: #0a8fff;
+}
 .cell {
     border: 2px solid white;
-    background-color: greenyellow;
+    background-color: var(--colorclosed);
     text-align: center;
     vertical-align: middle;
     padding: 16px;
     color: transparent;
     justify-content: center;
-
 }
 
 .cell.flip {
