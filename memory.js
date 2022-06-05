@@ -16,7 +16,7 @@ let loadedImages = [];
 
 cards.forEach(card => card.addEventListener("click", flipCard))
 victoryImg.addEventListener("click", resetBoard)
-newGameButton.addEventListener("click", kaas)
+newGameButton.addEventListener("click", resetBoard)
 
 function flipCard() {
     if (boardLocked) {return;}
@@ -80,10 +80,6 @@ function resetBoard() {
 
     document.getElementById("card-dropdown").selectedIndex = localStorage.getItem("picture-choice")
 
-}
-
-function kaas() {
-    console.log(sessionStorage.getItem("picture-choice")) ;
 }
 
 function shuffleCards() {
@@ -177,13 +173,14 @@ async function loadDogImages() {
             loadedImages = [];
             removeImages()
             loadPicsumImages();
-        }
-        else {
+        } else {
             loadedImages = [];
             removeImages()
             loadDogImages();
         }
-}
+
+        window.location.reload();
+    }
 
 
 
