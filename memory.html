@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="Memory_stylesheet.css">
     <title>Javascript memory</title>
 </head>
-<body onclick="changeColor()" onload="loadImages()">
+<body onclick="changeColor()" onload="loadStartingImages()">
     <div class="main-div">
         <div id="top-text">
         <h1>Javascript memory</h1>
@@ -83,11 +83,10 @@
                 <p><b>Gemiddelde speeltijd : </b>0s (64s)</p>
             </div>
             <div id="card-board-customizer">
-                <label for="card-dropdown"><b>Karakter op kaarten</b></label>
-                <select name="card-character" id="card-dropdown">
-                    <option value="*">*</option>
-                    <option value="X">X</option>
-                    <option value="#">#</option>
+                <label for="card-dropdown"><b>welke plaatjes wil je op de kaarten</b></label>
+                <select name="card-character" id="card-dropdown" onchange="changeCardPictures()">
+                    <option value="dogs">honden</option>
+                    <option value="random">willenkeurig</option>
                 </select>
                 <br>
                 <label for="boardsize-dropdown"><b>Afmeting bord</b></label>
