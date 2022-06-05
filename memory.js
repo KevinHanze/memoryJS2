@@ -132,7 +132,10 @@ function asignImage() {
     }
 }
 
-
+function changeColor() {
+    var defaultColor = document.getElementById("card-color").value;
+    document.documentElement.style.setProperty('--colorclosed', defaultColor)
+}
 
 
 
