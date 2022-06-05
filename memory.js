@@ -2,7 +2,7 @@ const cards = document.querySelectorAll('.cell')
 const victoryImg = document.getElementById("victory-img")
 const newGameButton = document.getElementById("new-game-button")
 const loadedImages = [];
-const imagesUrl = "https://dog.ceo/api/breeds/image/random";
+const imagesUrl = "https://picsum.photos/300";
 
 const options = {
     method: "GET"
@@ -117,18 +117,18 @@ async function loadImages() {
         }
     }
 
-    console.log(loadedImages)
     asignImage();
 }
 
 function asignImage() {
     for (let i =0; i < 18; i++) {
-        var card = document.getElementsByClassName('cell')[i];
-        var card2 = document.getElementsByClassName('cell')[i+18];
-        var img = document.createElement("img");
+        let j = i+18;
+        let img = document.createElement("img");
+        let img2 = document.createElement("img");
         img.src = loadedImages[i];
-        card2.appendChild(img)
-        card.appendChild(img)
+        img2.src = loadedImages[i];
+        document.getElementsByClassName('cell')[i].appendChild(img);
+        document.getElementsByClassName('cell')[j].appendChild(img2);
     }
 }
 
