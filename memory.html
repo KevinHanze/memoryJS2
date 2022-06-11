@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="Memory_stylesheet.css">
     <title>Javascript memory</title>
 </head>
-<body onclick="changeColor()" onload="loadStartingImages()">
+<body onclick="changeColor()" onload="loadStartingImages(); getPlayers()">
     <div class="main-div">
         <div id="top-text">
         <h1>Javascript memory</h1>
@@ -20,91 +20,39 @@
         <div class="grid-container">
             <div class="card-grid">
                 <div class="cell" id="card1"></div>
-                <div class="cell" id="card2"></div>
-                <div class="cell" id="card3"></div>
-                <div class="cell" id="card4"></div>
-                <div class="cell" id="card5"></div>
-                <div class="cell" id="card6"></div>
-
-
-                <div class="cell" id="card7"></div>
-                <div class="cell" id="card8"></div>
-                <div class="cell" id="card9"></div>
-                <div class="cell" id="card10"></div>
-                <div class="cell" id="card11"></div>
-                <div class="cell" id="card12"></div>
-
-
-                <div class="cell" id="card13"></div>
-                <div class="cell" id="card14"></div>
-                <div class="cell" id="card15"></div>
-                <div class="cell" id="card16"></div>
-                <div class="cell" id="card17"></div>
-                <div class="cell" id="card18"></div>
-
-
-                <div class="cell" id="card19"></div>
-                <div class="cell" id="card20"></div>
-                <div class="cell" id="card21"></div>
-                <div class="cell" id="card22"></div>
-                <div class="cell" id="card23"></div>
-                <div class="cell" id="card24"></div>
-
-
-                <div class="cell" id="card25"></div>
-                <div class="cell" id="card26"></div>
-                <div class="cell" id="card27"></div>
-                <div class="cell" id="card28"></div>
-                <div class="cell" id="card29"></div>
-                <div class="cell" id="card30"></div>
-
-
-                <div class="cell" id="card31"></div>
-                <div class="cell" id="card32"></div>
-                <div class="cell" id="card33"></div>
-                <div class="cell" id="card34"></div>
-                <div class="cell" id="card35"></div>
-                <div class="cell" id="card36"></div>
-
             </div>
         </div>
         <div class="sidebar">
         <div id="scoreboard">
-            <h4>top vijf</h4>
-            <ol>
-                <li>  Barrack Obama : 200 </li>
-                <li>  Bernie Sanders : 300 </li>
-                <li>  Hillary Clinton : 400 </li>
-                <li>  Donald Trump : 500 </li>
-                <li>  Jeb Bush : 600 </li>
-            </ol>
+            <h3>Top vijf</h3>
+            <table id="scores">
+                <tbody id="tbody"> <th>Naam</th> <th>score</th></tbody>
+            </table>
         </div>
             <div id="avg-time">
                 <p><b>Gemiddelde speeltijd : </b>0s (64s)</p>
             </div>
             <div id="card-board-customizer">
-                <label for="card-dropdown"><b>welke plaatjes wil je op de kaarten</b></label>
+                <label for="card-dropdown"><b>Welke plaatjes wil je op de kaarten</b></label>
                 <select name="card-character" id="card-dropdown" onchange="changeCardPictures()">
                     <option value="dogs"></option>
-                    <option value="dogs">honden</option>
-                    <option value="random">willenkeurig</option>
+                    <option value="dogs">Honden</option>
+                    <option value="random">Willekeurig</option>
                 </select>
                 <br>
                 <label for="boardsize-dropdown"><b>Afmeting bord</b></label>
-                <select name="boardsize-dropdown" id="boardsize-dropdown">
-                    <option value="10">10</option>
-                    <option value="50">50</option>
-                    <option value="100">100</option>
+                <select  name="boardsize-dropdown" id="boardsize-dropdown" onchange="changeSize()">
+                    <option value="2">4</option>
+                    <option value="4">16</option>
+                    <option selected value="6">36</option>
                 </select>
             </div>
             <div id="card-colours">
                 <button class="button">kaartkleur</button>
                 <input type="color" id="card-color" value="#93FF33"><br>
-                <button class="button">Open</button>
-                <input type="color" id="card-open" value="#1C8A16"><br>
-                <button class="button">Gevonden</button>
-                <input type="color" id="card-found" value="#90088C"><br>
+
             </div>
+
             <div id="new-game">
             <button class="button" id="new-game-button">Nieuw spel</button>
             </div>

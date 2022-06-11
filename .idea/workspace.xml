@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fd28624-43d4-4855-97ce-3d1f77dd4e24" name="Default Changelist" comment="Kleur veranderen">
-      <change afterPath="$PROJECT_DIR$/leesopdrachten.txt" afterDir="false" />
+    <list default="true" id="9fd28624-43d4-4855-97ce-3d1f77dd4e24" name="Default Changelist" comment="Bijna klaar dynamisch bord, moet alleen ff kijken naar inladen images.">
+      <change afterPath="$PROJECT_DIR$/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Memory_stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/Memory_stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memory.html" beforeDir="false" afterPath="$PROJECT_DIR$/memory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/memory.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +18,15 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -23,9 +38,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -37,6 +55,12 @@
       <option name="presentableId" value="Default" />
       <updated>1654251625045</updated>
       <workItem from="1654251626296" duration="7794000" />
+      <workItem from="1654436508101" duration="7032000" />
+      <workItem from="1654449632881" duration="53000" />
+      <workItem from="1654449890080" duration="12527000" />
+      <workItem from="1654694969159" duration="1720000" />
+      <workItem from="1654698787652" duration="4330000" />
+      <workItem from="1654946236041" duration="9115000" />
     </task>
     <task id="LOCAL-00001" summary="Kleur veranderen">
       <created>1654258328738</created>
@@ -52,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654258343209</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge">
+      <created>1654436775903</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654436775903</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -68,9 +99,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Kleur veranderen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kleur veranderen" />
+    <MESSAGE value="Merge" />
+    <MESSAGE value="Bijna klaar dynamisch bord, moet alleen ff kijken naar inladen images." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bijna klaar dynamisch bord, moet alleen ff kijken naar inladen images." />
   </component>
 </project>

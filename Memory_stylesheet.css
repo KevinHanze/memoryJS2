@@ -7,8 +7,8 @@
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(6, 90px);
-    grid-template-rows: repeat(6, 90px);
+    grid-template-columns: var(--columns);
+    grid-template-rows: var(--columns);
 }
 
 .grid-container {
@@ -19,6 +19,7 @@
 }
 :root{
     --colorclosed: #93FF33;
+    --columns:repeat(6, 90px);
 }
 .cell {
     border: 2px solid white;
@@ -117,11 +118,35 @@
 #new-game {
     padding-top: 40px;
 }
+#scores {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
 
+#scores thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+#scores th,
+#scores td {
+    padding: 12px 15px;
+}
+#scores tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
 
+#scores tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
 
-
-
+#scores tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
 
 
 
