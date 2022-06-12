@@ -15,11 +15,13 @@ function Kaartmaker(node, count, deep) {
 }
 Kaartmaker(document.querySelector('.cell'),kaarten,true);
 const cards = document.querySelectorAll('.cell')
+const pairs = document.getElementById('pairs');
 const victoryImg = document.getElementById("victory-img")
 const newGameButton = document.getElementById("new-game-button")
 const imagesUrl = "https://picsum.photos/300";
 const dogImagesUrl = "https://dog.ceo/api/breeds/image/random"
 const settings = document.getElementById('settings-icon');
+const time = document.getElementById('time');
 
 
 
@@ -32,14 +34,29 @@ let firstCard, secondCard
 let boardLocked = false;
 let cardsFlipped = 0;
 let loadedImages = [];
+let pairsFound = 0;
+let secondsPlayed = 0;
 
 cards.forEach(card => card.addEventListener("click", flipCard))
 victoryImg.addEventListener("click", resetBoard)
-newGameButton.addEventListener("click", resetBoard)
+newGameButton.addEventListener("click", setCounter)
 settings.addEventListener("click", goToSettings)
 
 function goToSettings() {
     location.href = "settings.html";
+}
+
+function setCounter() {
+    secondsPlayed += 1;
+    time.innerHTML = "Verlopen tijd: " + secondsPlayed;
+    setTimeout(setCounter, 1000);
+    let timeBar = document.getElementById('bar');
+    let timeLeft = 100 - secondsPlayed;
+    timeBar.style.width=timeLeft+"%";
+}
+
+function updatePairs() {
+    pairs.innerHTML = "Gevonden kaart-paren: " + pairsFound;
 }
 
 function flipCard() {
@@ -55,6 +72,8 @@ function flipCard() {
         secondCard = this;
         if (firstCard.innerHTML === secondCard.innerHTML) {
             flip();
+            pairsFound++;
+            setTimeout(updatePairs(), 500)
         } else {
             resetCards()
         }
