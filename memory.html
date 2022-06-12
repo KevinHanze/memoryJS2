@@ -36,13 +36,18 @@
             <div id="card-board-customizer">
                 <label for="boardsize-dropdown"><b>Afmeting bord</b></label>
                 <select  name="boardsize-dropdown" id="boardsize-dropdown" onchange="changeSize()">
+                    <option hidden></option>
                     <option value="2">4</option>
                     <option value="4">16</option>
-                    <option selected value="6">36</option>
+                    <option value="6">36</option>
                 </select>
             </div>
+            <div id="card-colours">
+                <button class="button">kaartkleur</button>
+                <input type="color" id="card-color" value="#93FF33"><br>
+            </div>
             <div id="new-game">
-            <button class="button" id="new-game-button">Nieuw spel</button>
+            <button class="button" id="new-game-button" onclick="resetBoard()">Nieuw spel</button>
             </div>
             <div class="victory-screen">
                 <img src="images/Victory_screen.png" id="victory-img">

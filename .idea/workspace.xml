@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fd28624-43d4-4855-97ce-3d1f77dd4e24" name="Default Changelist" comment="Bijna klaar dynamisch bord, moet alleen ff kijken naar inladen images.">
+    <list default="true" id="9fd28624-43d4-4855-97ce-3d1f77dd4e24" name="Default Changelist" comment="Login registreer gefixt behalve jwt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Memory_stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/Memory_stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memory.html" beforeDir="false" afterPath="$PROJECT_DIR$/memory.html" afterDir="false" />
@@ -41,6 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -112,6 +113,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Kleur veranderen" />
