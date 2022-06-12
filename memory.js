@@ -3,6 +3,7 @@ const lb = document.getElementById("boardsize-dropdown").value;
 const afbeeldingen = kaarten/2;
 console.log(afbeeldingen)
 console.log(kaarten, lb, afbeeldingen)
+
 function Kaartmaker(node, count, deep) {
     for (var i = 0, copy; i<count -1; i++){
         copy = node.cloneNode(deep);
@@ -18,6 +19,7 @@ const victoryImg = document.getElementById("victory-img")
 const newGameButton = document.getElementById("new-game-button")
 const imagesUrl = "https://picsum.photos/300";
 const dogImagesUrl = "https://dog.ceo/api/breeds/image/random"
+const settings = document.getElementById('settings-icon');
 
 
 
@@ -34,7 +36,11 @@ let loadedImages = [];
 cards.forEach(card => card.addEventListener("click", flipCard))
 victoryImg.addEventListener("click", resetBoard)
 newGameButton.addEventListener("click", resetBoard)
+settings.addEventListener("click", goToSettings)
 
+function goToSettings() {
+    location.href = "settings.html";
+}
 
 function flipCard() {
     if (boardLocked) {return;}
