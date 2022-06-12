@@ -161,6 +161,12 @@
     cursor: pointer;
 }
 
+#inloggen {
+    float: right;
+    padding: 10px;
+    margin-top:8px;
+}
+
 #settings-icon:hover {
     height: 32px;
 }

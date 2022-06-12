@@ -239,7 +239,9 @@ function getPlayers(){
         window.location.reload();
     }
 
-
+function goToLogin() {
+    location.href = "login.html";
+}
 
 
 
