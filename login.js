@@ -30,18 +30,20 @@ function getSettings(){
 }
 
 function register(){
-    var username = document.getElementById('name').value;
-    var passw = document.getElementById('passw').value;
+    var name = document.getElementById('name').value;
+    var passwo = document.getElementById('passw').value;
     var email = document.getElementById('email').value;
-    const logindata = {"username": username, "email":email, "password":passw}
+    const logindata = {"username": name, "email":email, "password":passwo}
+    console.log(logindata)
     fetch('http://localhost:8000/api/register',{ method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify(logindata)
     })
         .then( resp => resp.json() )
-        .then( resp => {
+        .then( json => {
                 // let jwt = data.token;
-                localStorage.setItem('player_token', JSON.stringify(resp))
+            console.log(json.data)
+                localStorage.setItem('player_token', JSON.stringify(json.data))
             }
         )
 }
