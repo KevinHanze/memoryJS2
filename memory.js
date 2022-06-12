@@ -126,22 +126,7 @@ async function loadDogImages() {
     asignImage();
     boardLocked = false;
 }
-function getPlayers(){
 
-    fetch('http://localhost:8000/scores',{ method:'GET'})
-        .then( resp => resp.json() )
-        .then( json => {
-            var tbody = document.getElementById('tbody')
-            json.sort(function (a, b){
-                return b.score - a.score
-            })
-            for(var i =0; i<5; i++){
-                var tr = "<tr>";
-                tr += "<td>" +json[i].username + "</td>"+"<td>"+json[i].score+"</td></tr>"
-                tbody.innerHTML += tr;
-            }
-        })
-}
 
     async function loadPicsumImages() {
         boardLocked = true;
@@ -232,7 +217,22 @@ function getPlayers(){
 
         window.location.reload();
     }
+function getPlayers(){
 
+    fetch('http://localhost:8000/scores',{ method:'GET'})
+        .then( resp => resp.json() )
+        .then( json => {
+            var tbody = document.getElementById('tbody');
+            json.sort(function (a, b){
+                return b.score - a.score
+            });
+            for(var i =0; i<5; i++){
+                var tr = "<tr>";
+                tr += "<td>" +json[i].username + "</td>"+"<td>"+json[i].score+"</td></tr>"
+                tbody.innerHTML += tr;
+            }
+        })
+}
 
 
 
