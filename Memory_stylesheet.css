@@ -28,6 +28,12 @@
     vertical-align: middle;
     padding: 16px;
     justify-content: center;
+    cursor: pointer;
+}
+
+.cell:hover {
+    border: solid 1px black;
+
 }
 
 .cell.flip {
@@ -72,7 +78,7 @@
 }
 
 .victory-screen {
-    background-image: url("../images/Victory_screen.png");
+    background-image: url("images/Victory_screen.png");
 
     height: 100%;
 
@@ -146,6 +152,17 @@
 
 #scores tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
+}
+
+#settings-icon {
+    float: right;
+    height: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#settings-icon:hover {
+    height: 32px;
 }
 
 

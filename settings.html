@@ -2,10 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Voorkeuren</title>
+    <link rel="stylesheet" href="settings.css">
+    <title>Settings</title>
 </head>
 <body>
-<button onclick="getSettings()">Test</button>
+<div class="settings-page">
+    <div class="form">
+        <div class="login-form">
+            <h2>Kies uw Voorkeur</h2>
+            <div id="image-picker" class="settings-item">
+                <label for="image-pick"><b>Kaart afbeeldingen</b></label>
+                <select name="card-character" id="image-pick">
+                    <option value="dogs"></option>
+                    <option value="dogs">Honden</option>
+                    <option value="random">Willekeurig</option>
+                </select>
+            </div>
+            <div id="color-picker1" class="settings-item">
+                <label for="card-color-open">Kaartkleur open</label>
+                <input type="color" id="card-color-open" value="#93FF33">
+            </div>
+            <div id="color-picker2" class="settings-item">
+                <label for="card-color-closed">Kaartkleur Gesloten</label>
+                <input type="color" id="card-color-closed" value="#93FF33">
+            </div>
+            <button id="button">Submit</button>
+        </div>
+    </div>
+</div>
 </body>
-<script src="login.js"></script>
+<script src="settings.js"></script>
 </html>
