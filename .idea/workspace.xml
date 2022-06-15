@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fd28624-43d4-4855-97ce-3d1f77dd4e24" name="Default Changelist" comment="Bijna klaar dynamisch bord, moet alleen ff kijken naar inladen images.">
-      <change afterPath="$PROJECT_DIR$/images/Victory_screen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.js" afterDir="false" />
+    <list default="true" id="9fd28624-43d4-4855-97ce-3d1f77dd4e24" name="Default Changelist" comment="Login registreer gefixt behalve jwt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Memory_stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/Memory_stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memory.html" beforeDir="false" afterPath="$PROJECT_DIR$/memory.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/memory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -45,6 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -93,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654436775903</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Login en registreer">
+      <created>1655058850798</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655058850798</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,11 +113,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Kleur veranderen" />
     <MESSAGE value="Merge" />
     <MESSAGE value="Bijna klaar dynamisch bord, moet alleen ff kijken naar inladen images." />
-    <option name="LAST_COMMIT_MESSAGE" value="Bijna klaar dynamisch bord, moet alleen ff kijken naar inladen images." />
+    <MESSAGE value="Login en registreer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login en registreer" />
   </component>
 </project>

@@ -1,8 +1,7 @@
-const kaarten = document.getElementById("boardsize-dropdown").value*document.getElementById("boardsize-dropdown").value;
-const lb = document.getElementById("boardsize-dropdown").value;
+const kaarten = localStorage.getItem("sizes")*localStorage.getItem("sizes")
+const lb = localStorage.getItem("sizes")
 const afbeeldingen = kaarten/2;
-console.log(afbeeldingen)
-console.log(kaarten, lb, afbeeldingen)
+
 
 function Kaartmaker(node, count, deep) {
     for (var i = 0, copy; i<count -1; i++){
@@ -11,15 +10,29 @@ function Kaartmaker(node, count, deep) {
         copy.id = 'card'+x;
         node.parentNode.insertBefore(copy, node);
     }
-
 }
-Kaartmaker(document.querySelector('.cell'),kaarten,true);
+if (localStorage.getItem("sizes")=== null){
+    localStorage.setItem("sizes",'36');
+    var test = localStorage.getItem("sizes");
+    Kaartmaker(document.querySelector('.cell'),test,true);
+    var lengte = 'repeat('+lb + ", 90px)";
+    document.documentElement.style.setProperty('--columns',lengte);
+}
+else {
+    Kaartmaker(document.querySelector('.cell'), localStorage.getItem("sizes")*localStorage.getItem("sizes"), true)
+    var lengte2 = 'repeat('+lb + ", 90px)";
+    document.documentElement.style.setProperty('--columns',lengte2);
+}
+
+
 const cards = document.querySelectorAll('.cell')
+const pairs = document.getElementById('pairs');
 const victoryImg = document.getElementById("victory-img")
 const newGameButton = document.getElementById("new-game-button")
 const imagesUrl = "https://picsum.photos/300";
 const dogImagesUrl = "https://dog.ceo/api/breeds/image/random"
 const settings = document.getElementById('settings-icon');
+const time = document.getElementById('time');
 
 
 
@@ -32,14 +45,29 @@ let firstCard, secondCard
 let boardLocked = false;
 let cardsFlipped = 0;
 let loadedImages = [];
+let pairsFound = 0;
+let secondsPlayed = 0;
 
 cards.forEach(card => card.addEventListener("click", flipCard))
 victoryImg.addEventListener("click", resetBoard)
-newGameButton.addEventListener("click", resetBoard)
+newGameButton.addEventListener("click", setCounter)
 settings.addEventListener("click", goToSettings)
 
 function goToSettings() {
     location.href = "settings.html";
+}
+
+function setCounter() {
+    secondsPlayed += 1;
+    time.innerHTML = "Verlopen tijd: " + secondsPlayed;
+    setTimeout(setCounter, 1000);
+    let timeBar = document.getElementById('bar');
+    let timeLeft = 100 - secondsPlayed;
+    timeBar.style.width=timeLeft+"%";
+}
+
+function updatePairs() {
+    pairs.innerHTML = "Gevonden kaart-paren: " + pairsFound;
 }
 
 function flipCard() {
@@ -55,6 +83,8 @@ function flipCard() {
         secondCard = this;
         if (firstCard.innerHTML === secondCard.innerHTML) {
             flip();
+            pairsFound++;
+            setTimeout(updatePairs(), 500)
         } else {
             resetCards()
         }
@@ -132,7 +162,22 @@ async function loadDogImages() {
     asignImage();
     boardLocked = false;
 }
+function getPlayers(){
 
+    fetch('http://localhost:8000/scores',{ method:'GET'})
+        .then( resp => resp.json() )
+        .then( json => {
+            var tbody = document.getElementById('tbody')
+            json.sort(function (a, b){
+                return b.score - a.score
+            })
+            for(var i =0; i<5; i++){
+                var tr = "<tr>";
+                tr += "<td>" +json[i].username + "</td>"+"<td>"+json[i].score+"</td></tr>"
+                tbody.innerHTML += tr;
+            }
+        })
+}
 
     async function loadPicsumImages() {
         boardLocked = true;
@@ -171,31 +216,24 @@ async function loadDogImages() {
         shuffleCards();
     }
 
-    function removeImages() {
-    for (let i =0; i < cards.length; i++) {
-        if (cards[i].firstChild) {
-            cards[i].removeChild(cards[i].firstChild)
-            }
+function removeImages() {
+for (let i =0; i < cards.length; i++) {
+    if (cards[i].firstChild) {
+        cards[i].removeChild(cards[i].firstChild)
         }
     }
+}
 
-    function changeSize(){
+
+function changeSize() {
+    {
         let size = document.getElementById("boardsize-dropdown").value;
-        sessionStorage.clear();
-        sessionStorage.setItem("sizes",size);
-
-        if(sessionStorage.getItem("sizes")==="2"){
-            Kaartmaker(document.querySelector('.cell'),4,true);
-            asignImage()
-        }
-        if(sessionStorage.getItem("sizes")==="4"){
-            Kaartmaker(document.querySelector('.cell'),16,true);
-        }
-        if(sessionStorage.getItem("sizes")==="6"){
-            window.location.reload();
-            Kaartmaker(document.querySelector('.cell'),36,true);
-        }
+        localStorage.clear();
+        localStorage.setItem("sizes", size);
+        console.log(size, localStorage.getItem("sizes"))
+        window.location.reload();
     }
+}
     function changeColor() {
         var defaultColor = document.getElementById("card-color").value;
         document.documentElement.style.setProperty('--colorclosed', defaultColor);
@@ -223,23 +261,10 @@ async function loadDogImages() {
 
         window.location.reload();
     }
-function getPlayers(){
 
-    fetch('http://localhost:8000/scores',{ method:'GET'})
-        .then( resp => resp.json() )
-        .then( json => {
-            var tbody = document.getElementById('tbody');
-            json.sort(function (a, b){
-                return b.score - a.score
-            });
-            for(var i =0; i<5; i++){
-                var tr = "<tr>";
-                tr += "<td>" +json[i].username + "</td>"+"<td>"+json[i].score+"</td></tr>"
-                tbody.innerHTML += tr;
-            }
-        })
+function goToLogin() {
+    location.href = "login.html";
 }
-
 
 
 
