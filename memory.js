@@ -47,10 +47,11 @@ let cardsFlipped = 0;
 let loadedImages = [];
 let pairsFound = 0;
 let secondsPlayed = 0;
+let timerStarted = false;
 
 cards.forEach(card => card.addEventListener("click", flipCard))
 victoryImg.addEventListener("click", resetBoard)
-newGameButton.addEventListener("click", setCounter)
+newGameButton.addEventListener("click", resetBoard)
 settings.addEventListener("click", goToSettings)
 
 function goToSettings() {
@@ -74,6 +75,10 @@ function flipCard() {
     if (boardLocked) {return;}
     if (this === firstCard) {return;}
     this.classList.toggle('flip')
+    if (!timerStarted) {
+        timerStarted = true;
+        setCounter();
+    }
     if (!cardFlipped) {
         cardFlipped = true;
         firstCard = this;
