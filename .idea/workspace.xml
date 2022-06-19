@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9fd28624-43d4-4855-97ce-3d1f77dd4e24" name="Default Changelist" comment="Login registreer gefixt behalve jwt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/memory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/settings.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,7 @@
       <workItem from="1655293159971" duration="4564000" />
       <workItem from="1655367152081" duration="1485000" />
       <workItem from="1655562137178" duration="199000" />
-      <workItem from="1655656792802" duration="3647000" />
+      <workItem from="1655656792802" duration="3783000" />
     </task>
     <task id="LOCAL-00001" summary="Kleur veranderen">
       <created>1654258328738</created>

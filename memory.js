@@ -120,6 +120,18 @@ function flip() {
     }
 }
 
+function getSettings() {
+    var token = localStorage.getItem('player_token');
+    fetch('http://localhost:8000/{id}/preferences',{ method:'get',
+        headers:{'Content-Type':'application/json','player_token':token}
+    })
+        .then( resp => resp.json() )
+        .then( json => {
+                console.log(json.data)
+            }
+        )
+}
+
 function resetCards() {
     setTimeout(() => {
         firstCard.classList.remove('flip')

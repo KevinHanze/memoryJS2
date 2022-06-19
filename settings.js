@@ -1,12 +1,24 @@
 document.getElementById('button').addEventListener("click", submitPreferences)
 document.getElementById('button').addEventListener("click", goToMemory)
+document.g
 
 function submitPreferences() {
-    let preferedImage = document.getElementById('image-pick').value;
+    let preferedApi = document.getElementById('image-pick').value;
     let cardOpen = document.getElementById('card-color-open').value;
     let cardClosed = document.getElementById('card-color-closed').value;
 
+    const preferences = {"api": preferedApi, "color_found": cardOpen, "color_closed": cardClosed};
+    const token = localStorage.getItem('player_token');
 
+    fetch('http://localhost:8000/api/player/{id}/preferences',{ method:'POST',
+        headers:{'Content-Type':'application/json','player_token':token},
+        body:JSON.stringify(preferences)
+    })
+        .then( resp => resp.json() )
+        .then( json => {
+
+            }
+        )
 }
 
 function goToMemory() {
