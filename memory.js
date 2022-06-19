@@ -167,6 +167,7 @@ function getPlayers(){
     fetch('http://localhost:8000/scores',{ method:'GET'})
         .then( resp => resp.json() )
         .then( json => {
+            console.log(json)
             var tbody = document.getElementById('tbody')
             json.sort(function (a, b){
                 return b.score - a.score
