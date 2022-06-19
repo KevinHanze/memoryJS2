@@ -229,7 +229,6 @@ for (let i =0; i < cards.length; i++) {
 function changeSize() {
     {
         let size = document.getElementById("boardsize-dropdown").value;
-        localStorage.clear();
         localStorage.setItem("sizes", size);
         console.log(size, localStorage.getItem("sizes"))
         window.location.reload();

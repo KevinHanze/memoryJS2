@@ -1,4 +1,8 @@
-function login(){
+//document.getElementById("submit").addEventListener("submit",login(event))
+function login(event){
+    event.preventDefault()
+    // var formData = new FormData(document.getElementById("loginform").value);
+    // console.log(formData)
     var username = document.getElementById('username').value;
     var passw = document.getElementById('password').value;
     const logindata = {"username": username, "password":passw}
@@ -6,16 +10,17 @@ function login(){
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify(logindata)
     })
-        .then( resp => resp.json() )
+        .then(resp => resp.json())
         .then( json => {
             const current= new Date()
             const test = {
                 token: json.token,
-                expiry: current.getTime()+ 3600000
+                expiry: current.getTime()+ 3600
             }
-            localStorage.setItem('jwt', JSON.stringify(test))
+            localStorage.setItem('player_token', JSON.stringify(test))
             }
         )
+
 }
 
 function getSettings(){
@@ -32,7 +37,6 @@ function getSettings(){
         }
     )
 }
-
 function register(){
     var name = document.getElementById('name').value;
     var passwo = document.getElementById('passw').value;
@@ -48,4 +52,5 @@ function register(){
 
             }
         )
+    location.href = "login.html";
 }

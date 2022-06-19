@@ -7,7 +7,7 @@
 </head>
 <body onclick="changeColor()" onload="loadStartingImages(); getPlayers()">
     <div class="main-div">
-        <img src="images/setting.png" alt="settings" id="settings-icon" >
+        <img src="images/setting.png" alt="settings" id="settings-icon" onclick="getSettings()" >
         <button id="inloggen" onclick="goToLogin()">Inloggen</button>
         <div id="top-text">
         <h1>Javascript memory</h1>
@@ -43,9 +43,17 @@
                 </select>
             </div>
             <div id="card-colours">
+                <label for="card-dropdown"><b>welke plaatjes wil je op de kaarten</b></label>
+                <select name="card-character" id="card-dropdown" onchange="changeCardPictures()">
+                    <option value="dogs"></option>
+                    <option value="dogs">honden</option>
+                    <option value="random">willenkeurig</option>
+                </select>
+                <br>
                 <button class="button">kaartkleur</button>
                 <input type="color" id="card-color" value="#93FF33"><br>
             </div>
+
             <div id="new-game">
             <button class="button" id="new-game-button" onclick="resetBoard()">Nieuw spel</button>
             </div>

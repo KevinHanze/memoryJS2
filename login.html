@@ -8,10 +8,10 @@
 <body>
 <div class="login-page">
     <div class="form">
-        <form class="login-form">
+        <form id="loginform" class="login-form" >
             <input id= "username" type="text" placeholder="Gebruikersnaam"/>
             <input id="password" type="password" placeholder="Wachtwoord"/>
-            <button id="submit" onclick="login()">login</button>
+            <button id="submit" onclick="login(event)">login</button>
             <p class="message">Nog niet geregistreerd? <a href="register.html">Creëer een account</a></p>
         </form>
     </div>
