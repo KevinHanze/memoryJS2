@@ -8,8 +8,12 @@ function login(){
     })
         .then( resp => resp.json() )
         .then( json => {
-            // let jwt = data.token;
-            localStorage.setItem('player_token', JSON.stringify(resp))
+            const current= new Date()
+            const test = {
+                token: json.token,
+                expiry: current.getTime()+ 3600000
+            }
+            localStorage.setItem('jwt', JSON.stringify(test))
             }
         )
 }
@@ -35,15 +39,13 @@ function register(){
     var email = document.getElementById('email').value;
     const logindata = {"username": name, "email":email, "password":passwo}
     console.log(logindata)
-    fetch('http://localhost:8000/api/register',{ method:'POST',
+    fetch('http://localhost:8000/register',{ method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify(logindata)
     })
         .then( resp => resp.json() )
         .then( json => {
-                // let jwt = data.token;
-            console.log(json.data)
-                localStorage.setItem('player_token', JSON.stringify(json.data))
+
             }
         )
 }
