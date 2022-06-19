@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9fd28624-43d4-4855-97ce-3d1f77dd4e24" name="Default Changelist" comment="Login registreer gefixt behalve jwt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Memory_stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/Memory_stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memory.html" beforeDir="false" afterPath="$PROJECT_DIR$/memory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/memory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +40,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../project 2.3/InternationalWeatherAgency" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -68,6 +66,11 @@
       <workItem from="1654698787652" duration="4330000" />
       <workItem from="1654946236041" duration="9115000" />
       <workItem from="1655032830478" duration="11876000" />
+      <workItem from="1655290967640" duration="1363000" />
+      <workItem from="1655293159971" duration="4564000" />
+      <workItem from="1655367152081" duration="1485000" />
+      <workItem from="1655562137178" duration="199000" />
+      <workItem from="1655656792802" duration="3647000" />
     </task>
     <task id="LOCAL-00001" summary="Kleur veranderen">
       <created>1654258328738</created>
@@ -113,7 +116,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Kleur veranderen" />
