@@ -1,6 +1,6 @@
 document.getElementById('button').addEventListener("click", submitPreferences)
 document.getElementById('button').addEventListener("click", goToMemory)
-document.g
+
 
 function submitPreferences() {
     let preferedApi = document.getElementById('image-pick').value;
@@ -27,8 +27,7 @@ function goToMemory() {
 
 function getEmail(){
     var token = localStorage.getItem('player_token');
-    console.log(token)
-    fetch('http://localhost:8000/api/player/{id}/email',{ method:'get',
+    fetch('http://localhost:8000/api/player/{id}/email',{ method:'GET',
         headers:{'Content-Type':'application/json','player_token':token}
     })
         .then( resp => resp.json() )
@@ -38,4 +37,17 @@ function getEmail(){
                 console.log(json.data)
             }
         )
+}
+function setEmail(event){
+    event.preventDefault()
+    var token = localStorage.getItem('player_token');
+    var email = document.getElementById("email_new").value
+    fetch('http://localhost:8000/api/player/{id}/email',{ method:'PUT',
+        headers:{'Content-Type':'application/json','player_token':token
+    },body: JSON.stringify("email", email)
+    })
+        .then(resp => resp.json())
+        .then(json =>{
+            console.log("Je email is veranderd naar:" + email)
+        })
 }

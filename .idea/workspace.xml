@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fd28624-43d4-4855-97ce-3d1f77dd4e24" name="Default Changelist" comment="Login registreer gefixt behalve jwt">
+    <list default="true" id="9fd28624-43d4-4855-97ce-3d1f77dd4e24" name="Default Changelist" comment="JWT Token + ophalen email functie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/memory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/settings.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/settings.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../project 2.3/InternationalWeatherAgency" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -67,11 +70,11 @@
       <workItem from="1654698787652" duration="4330000" />
       <workItem from="1654946236041" duration="9115000" />
       <workItem from="1655032830478" duration="11876000" />
-      <workItem from="1655290967640" duration="1363000" />
-      <workItem from="1655293159971" duration="4564000" />
-      <workItem from="1655367152081" duration="1485000" />
-      <workItem from="1655562137178" duration="199000" />
-      <workItem from="1655656792802" duration="3783000" />
+      <workItem from="1655067588586" duration="677000" />
+      <workItem from="1655321669359" duration="791000" />
+      <workItem from="1655647399473" duration="6155000" />
+      <workItem from="1655657356494" duration="170000" />
+      <workItem from="1655670526365" duration="1650000" />
     </task>
     <task id="LOCAL-00001" summary="Kleur veranderen">
       <created>1654258328738</created>
@@ -101,7 +104,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655058850798</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Dynamisch bord gefixt">
+      <created>1655067475273</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655067475273</updated>
+    </task>
+    <task id="LOCAL-00006" summary="JWT Token + ophalen email functie">
+      <created>1655657400439</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655657400439</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,12 +134,15 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Kleur veranderen" />
     <MESSAGE value="Merge" />
     <MESSAGE value="Bijna klaar dynamisch bord, moet alleen ff kijken naar inladen images." />
     <MESSAGE value="Login en registreer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login en registreer" />
+    <MESSAGE value="Dynamisch bord gefixt" />
+    <MESSAGE value="JWT Token + ophalen email functie" />
+    <option name="LAST_COMMIT_MESSAGE" value="JWT Token + ophalen email functie" />
   </component>
 </project>

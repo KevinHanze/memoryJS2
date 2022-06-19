@@ -20,7 +20,7 @@ function login(event){
             localStorage.setItem('player_token', JSON.stringify(test))
             }
         )
-
+        location.href = "memory.html";
 }
 
 function getSettings(){
@@ -49,7 +49,7 @@ function register(){
     })
         .then( resp => resp.json() )
         .then( json => {
-
+            console.log("Geregistreerd, log nu in.")
             }
         )
     location.href = "login.html";
